@@ -1,0 +1,309 @@
+// 1.  Verificador de Número Positivo ou Negativo:
+
+//        Peça ao usuário para inserir um número.
+//        Use `if-else` para verificar se o número é positivo, negativo ou zero.
+//        Exiba a mensagem correspondente (ex: "O número é positivo.").
+
+const prompt = require("prompt-sync")(); // importa o prompt-sync
+/*
+let numero = parseFloat(prompt("Digite um numero:"));
+
+    if (numero > 0) {
+        console.log("O numero é positivo.");
+    } else if (numero < 0) {
+        console.log("O numero é negativo.");
+    } else {
+        console.log("O numero é zero.");
+    }
+        console.log("FIM DO EXERCICIO");
+*/
+
+// 2.  Verificador de Idade:
+//        Peça ao usuário para inserir sua idade.
+//        Verifique se a pessoa é maior de idade (18 anos ou mais).
+//        Exiba "Você é maior de idade" ou "Você é menor de idade".
+/*
+let idade = parseInt(prompt("Digite sua idade:"));
+
+    if (idade >= 18) {
+        console.log("Você é maior de idade.");
+    } else {
+        console.log("Você é menor de idade.");
+    }
+*/
+// 3.  Login Simples:
+
+//        Defina um nome de usuário e uma senha em variáveis.
+//        Peça ao usuário para inserir um nome de usuário e uma senha.
+//        Verifique se o nome de usuário e a senha estão corretos.
+//        Exiba "Login bem-sucedido\!" ou "Nome de usuário ou senha incorretos."
+/*
+let usuarioCadastrado = "admin";
+let senhaCadastrada = "123";
+
+let usuario = prompt("Digite seu nome de usuario:");
+let senha = prompt("Digite sua senha:");
+    if (usuario === usuarioCadastrado && senha === senhaCadastrada) {
+        console.log("Login bem-sucedido!");
+    } else {
+        console.log("Nome de usuário ou senha incorretos.");
+    }
+*/
+
+    // 4.  Calculadora de Média Escolar:
+
+//        Peça ao usuário para inserir três notas de um aluno (de 0 a 10).
+//        Calcule a média dessas notas.
+//        Use `if-else if-else` para determinar o status do aluno:
+//            Média \>= 7: "Aprovado"
+//            Média \>= 5 e \< 7: "Recuperação"
+//            Média \< 5: "Reprovado"
+/*
+console.log("Calculadora de Média Escolar");
+let nota1 = parseFloat(prompt("Digite a primeira nota:"));
+let nota2 = parseFloat(prompt("Digite a segunda nota:"));
+let nota3 = parseFloat(prompt("Digite a terceira nota:"));
+let media = (nota1 + nota2 + nota3) / 3;
+
+    if (media >= 7) {
+        console.log("Aprovado");
+    } else if (media >= 5 && media < 7) {
+        console.log("Recuperação");
+    } else {
+        console.log("Reprovado");
+    } */
+
+    //  Nível Iniciante
+
+// 1.  Dias da Semana:
+
+//        Peça ao usuário para inserir um número de 1 a 7.
+//        Use um `switch-case` para exibir o nome do dia da semana correspondente (1 para Domingo, 2 para Segunda, etc.).
+//        Inclua um caso `default` para números inválidos.
+/*
+
+let dia = parseInt(prompt("Digite um numero de 1 a 7:"));
+
+    switch (dia) {
+        case 1:
+            console.log("Domingo");
+            break;
+        case 2:
+            console.log("Segunda-feira");
+            break;
+        case 3:
+            console.log("Terça-feira");
+            break;
+        case 4:
+            console.log("Quarta-feira");
+            break;
+        case 5:
+            console.log("Quinta-feira");
+            break;
+        case 6:
+            console.log("Sexta-feira");
+            break;
+        case 7:
+            console.log("Sábado");
+            break;
+        default:
+            console.log("Número inválido. Por favor, insira um número entre 1 e 7.");
+    }
+*/
+
+// 2.  Cardápio de Lanchonete:
+
+//        Mostre um cardápio com códigos: 100 - Cachorro-quente, 101 - Bauru, 102 - Misto Quente, 103 - Hambúrguer.
+//        Peça ao usuário para digitar o código do item desejado.
+//        Use `switch-case` para exibir o nome do lanche escolhido.
+/*
+console.log("Cardápio de Lanchonete:");
+console.log("100 - Cachorro-quente");
+console.log("101 - Bauru");
+console.log("102 - Misto Quente");
+console.log("103 - Hambúrguer");
+
+let codigo = parseInt(prompt("Digite o código do lanche desejado (100, 101, 102, 103):"));
+    switch (codigo) {
+        case 100:
+            console.log("Você escolheu: Cachorro-quente");
+            break;
+        case 101:
+            console.log("Você escolheu: Bauru");
+            break;
+        case 102:
+            console.log("Você escolheu: Misto Quente");
+            break;
+        case 103:
+            console.log("Você escolheu: Hambúrguer");
+            break;
+        default:
+            console.log("Código inválido. Por favor, escolha um código do cardápio.");
+    }
+*/
+    // 3.  Permissões de Usuário:
+
+//        Crie uma variável `perfil` que pode ter os valores: `'admin'`, `'gestor'` ou `'usuario'`.
+//        Use um `switch-case` para exibir as permissões de cada perfil:
+//            `'admin'`: "Acesso total ao sistema."
+//            `'gestor'`: "Acesso a relatórios e gerenciamento de usuários."
+//            `'usuario'`: "Acesso apenas para visualização."
+//            `default`: "Perfil desconhecido."
+/*
+let perfil = prompt("Digite seu perfil (admin, gestor, usuario):").toLowerCase();
+    switch (perfil) {
+        case 'admin':
+            console.log("Acesso total ao sistema.");
+            break;
+        case 'gestor':
+            console.log("Acesso a relatórios e gerenciamento de usuários.");
+            break;
+        case 'usuario':
+            console.log("Acesso apenas para visualização.");
+            break;
+        default:
+            console.log("Perfil desconhecido.");
+    }
+*/
+
+
+
+
+
+// 4.  Meses do Ano:
+
+//        Peça ao usuário um número de 1 a 12.
+//        Use `switch-case` para agrupar os meses por trimestre e exibir a qual trimestre o mês pertence.
+//            Casos 1, 2, 3: "Primeiro trimestre"
+//            Casos 4, 5, 6: "Segundo trimestre"
+//            E assim por diante. (Dica: você pode agrupar `case` sem `break`).
+/*
+let mes = parseInt(prompt("Digite um número de 1 a 12:"));
+    switch (mes) {
+        case 1:
+        case 2:
+        case 3:
+            console.log("Primeiro trimestre");
+            break;
+        case 4:
+        case 5:
+        case 6:
+            console.log("Segundo trimestre");
+            break;
+        case 7:
+        case 8:
+        case 9:
+            console.log("Terceiro trimestre");
+            break;
+        case 10:
+        case 11:
+        case 12:
+            console.log("Quarto trimestre");
+            break;
+        default:
+            console.log("Número inválido. Por favor, insira um número entre 1 e 12.");
+    }  
+*/
+
+    //  Exercícios com `Loops` (Estruturas de Repetição)
+
+//  Exercícios com `for`
+
+// 1.  Contagem de 1 a 50:
+
+//        Use um loop `for` para imprimir todos os números de 1 a 50 no console.
+/*
+for (let i = 1; i <= 50; i++) {
+    console.log(i);
+}
+*/
+
+// 2.  Tabuada:
+
+//        Peça ao usuário para inserir um número.
+//        Use um loop `for` para calcular e exibir a tabuada desse número (de 1 a 10).
+//        Exemplo de saída para o número 5:
+//         ```
+//         5 x 1 = 5
+//         5 x 2 = 10
+//         ...
+//         5 x 10 = 50
+//         ```
+
+//let numeroTabuada = parseInt(prompt("Digite um número para ver a tabuada:"));
+
+ // for (let i = 1; i <= 10; i++) {
+   //     console.log(`${numeroTabuada} x ${i} = ${numeroTabuada * i}`);
+//   }
+
+// 3.  Soma dos Primeiros 100 Números:
+
+//        Use um loop `for` para calcular a soma de todos os números de 1 a 100.
+//        Ao final, exiba o resultado total.
+
+let soma = 0;
+    for (let i = 1; i <= 100; i++) {
+        soma += i; // soma = soma + i
+    }
+console.log(soma); // Adicione esta linha para mostrar o resultado
+
+// 4.  Contagem de Números Pares:
+
+//        Use um loop `for` para percorrer os números de 1 a 100 e imprimir apenas os números que são pares.
+
+//  Exercícios com `while`
+
+// 1.  Contagem Regressiva:
+
+//        Use um loop `while` para fazer uma contagem regressiva de 10 até 0.
+//        Exiba cada número no console e, no final, a mensagem "Fogo\!".
+
+    let contador = 10;
+    while (contador >= 0) {
+        console.log(contador);
+        contador--;
+    }
+    console.log("Fogo!");
+
+// 2.  Validação de Senha:
+
+//        Defina uma senha em uma variável (ex: `'senha123'`).
+//        Peça ao usuário para digitar a senha repetidamente até que ele acerte.
+//        Use um loop `while` que continue executando enquanto a senha inserida for diferente da correta.
+//        Quando acertar, exiba "Acesso permitido\!".
+
+// 3.  Soma de Entradas do Usuário:
+
+//        Crie um programa que pede ao usuário para digitar números.
+//        Use um loop `while` para continuar somando os números digitados.
+//        O loop deve parar quando o usuário digitar o número `0`.
+//        No final, exiba a soma total de todos os números inseridos.
+/*
+        let numeroUsuario;
+        let somaUsuario = 0;
+        do {
+            numeroUsuario = parseFloat(prompt("Digite um número (ou 0 para sair):"));
+            somaUsuario += numeroUsuario;
+        } while (numeroUsuario !== 0);
+*/         
+// 4.  Adivinhe o Número:
+
+//        Gere um número aleatório entre 1 e 100 (pesquise como fazer isso na sua linguagem de programação).
+//        Peça ao usuário para adivinhar o número.
+//        Use um loop `while` para continuar pedindo palpites até que o usuário acerte.
+//        Dê dicas se o palpite foi "muito alto" ou "muito baixo".
+
+        let aleatorio = Math.floor(Math.random() * 100) + 1;
+        palpite = parseInt(prompt("Adivinhe o número entre 1 e 100:"));
+        while (palpite !== aleatorio) {
+            if (palpite < aleatorio) {
+                console.log("Muito baixo! Tente novamente.");
+                console.log("");
+            } else {
+                console.log("Muito alto! Tente novamente.");
+                console.log("");
+            }
+         palpite = parseInt(prompt("Adivinhe o número entre 1 e 100:"));
+        }   
+            console.log("ACERTOU O NUMERO GERADO FOI: " + aleatorio);
+        
