@@ -1,7 +1,7 @@
 const nome = 'matheus'
-const idade = 28
+const idadeA = 28
 
-console.log(`Meu nome � ${nome} e tenho ${idade} anos.`)
+console.log(`Meu nome � ${nome} e tenho ${idadeA} anos.`)
 console.log(typeof (nome))
 
 if (nome === 'matheus') {
@@ -69,3 +69,26 @@ default:
 }
 
 console.log(mensagem)
+
+
+// do {
+//     // passar pelo menos uma vez aqui
+// }while(/*condicao*/);
+
+// while(/*condicao*/){
+//     // ele so vai passr se a condicao corresponder
+// }
+
+let bairro = 'Santa Monica'
+let contador = 0;
+// do {
+//     console.log('Bairro:', bairro)
+//     console.log('Contador ', contador)
+//     contador++;
+// }while(bairro === "Santa Monica" && contador <=3 );
+
+while(bairro === "Santa" && contador <=3 ){
+    console.log('Bairro:', bairro)
+    console.log('Contador ', contador)
+    contador++;
+}
