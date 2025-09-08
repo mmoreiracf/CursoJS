@@ -4,7 +4,9 @@
 //        Use `if-else` para verificar se o número é positivo, negativo ou zero.
 //        Exiba a mensagem correspondente (ex: "O número é positivo.").
 
-const prompt = require("prompt-sync")(); // importa o prompt-sync
+// const prompt = require("prompt-sync")(); // importa o prompt-sync
+//readline
+
 /*
 let numero = parseFloat(prompt("Digite um numero:"));
 
@@ -58,20 +60,25 @@ let senha = prompt("Digite sua senha:");
 //            Média \>= 7: "Aprovado"
 //            Média \>= 5 e \< 7: "Recuperação"
 //            Média \< 5: "Reprovado"
-/*
+
 console.log("Calculadora de Média Escolar");
-let nota1 = parseFloat(prompt("Digite a primeira nota:"));
-let nota2 = parseFloat(prompt("Digite a segunda nota:"));
-let nota3 = parseFloat(prompt("Digite a terceira nota:"));
+// let nota1 = parseFloat(prompt("Digite a primeira nota:"));
+// let nota2 = parseFloat(prompt("Digite a segunda nota:"));
+// let nota3 = parseFloat(prompt("Digite a terceira nota:"));
+
+let nota1 = 7;
+let nota2 = 7;
+let nota3 = 6;
+
 let media = (nota1 + nota2 + nota3) / 3;
 
     if (media >= 7) {
         console.log("Aprovado");
-    } else if (media >= 5 && media < 7) {
+    } else if (media >= 5) {
         console.log("Recuperação");
     } else {
         console.log("Reprovado");
-    } */
+    } 
 
     //  Nível Iniciante
 
@@ -236,20 +243,36 @@ for (let i = 1; i <= 50; i++) {
    //     console.log(`${numeroTabuada} x ${i} = ${numeroTabuada * i}`);
 //   }
 
+//template literals ` ` es6 
+// console.log(numeroTabuada + "x " + i, "= " + numeroTabuada * i)
+// console.log(`numeroTabuada x ${i} = ${numeroTabuada * i}`)
+
 // 3.  Soma dos Primeiros 100 Números:
 
 //        Use um loop `for` para calcular a soma de todos os números de 1 a 100.
 //        Ao final, exiba o resultado total.
 
 let soma = 0;
-    for (let i = 1; i <= 100; i++) {
-        soma += i; // soma = soma + i
-    }
+for (let i = 1; i <= 100; i++) {
+    soma += i; // soma = soma + i
+}
 console.log(soma); // Adicione esta linha para mostrar o resultado
 
 // 4.  Contagem de Números Pares:
 
 //        Use um loop `for` para percorrer os números de 1 a 100 e imprimir apenas os números que são pares.
+
+console.log('Números pares')
+for (let i = 1; i <= 100; i++)
+    if(i % 2 == 0)
+        console.log(i)
+
+    // console.log(i % 2 == 0 ? i : "")
+
+// ternario (condicao) ? (se) : (senão)
+// divisão de numeros inteiros
+// divisão de numeros com casas decimais 
+
 
 //  Exercícios com `while`
 
@@ -295,6 +318,7 @@ console.log(soma); // Adicione esta linha para mostrar o resultado
 
         let aleatorio = Math.floor(Math.random() * 100) + 1;
         palpite = parseInt(prompt("Adivinhe o número entre 1 e 100:"));
+        
         while (palpite !== aleatorio) {
             if (palpite < aleatorio) {
                 console.log("Muito baixo! Tente novamente.");
@@ -303,7 +327,7 @@ console.log(soma); // Adicione esta linha para mostrar o resultado
                 console.log("Muito alto! Tente novamente.");
                 console.log("");
             }
-         palpite = parseInt(prompt("Adivinhe o número entre 1 e 100:"));
+            palpite = parseInt(prompt("Adivinhe o número entre 1 e 100:"));
         }   
-            console.log("ACERTOU O NUMERO GERADO FOI: " + aleatorio);
+        console.log("ACERTOU O NUMERO GERADO FOI: " + aleatorio);
         
