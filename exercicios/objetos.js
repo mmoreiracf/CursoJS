@@ -3,6 +3,32 @@
 
 // Cenário: Vamos criar um objeto para representar um Livro.
 
+const livro = {
+  titulo: "A Arte da Guerra",
+  autor: "Sun Tzu",
+  anoPublicacao: -500,
+  genero: "Estratégia Militar",
+  disponivel: true,
+
+//--------------------// Modificando a disponibilidade do livro //--------------------//
+alugar: function() {
+  let alugar = parseFloat.prompt("Digite se deseja alugar (s) para sim e (n) para não:");
+    if (alugar === "s") {
+        this.disponivel = false;
+        console.log("O livro foi alugado.");
+    }
+    else {
+        console.log("O livro não foi alugado.");
+    }  
+    }
+}; 
+console.log(livro.titulo);
+console.log(livro.autor);
+console.log(livro);
+
+
+
+
 // O que você precisa fazer:
 // Crie um objeto chamado livro.
 
@@ -31,6 +57,29 @@
 
 // O que você precisa fazer:
 // Crie um objeto chamado retangulo.
+
+retangulo = {
+  largura: 10,
+  altura: 5,
+
+calcularArea: function() {
+  return this.largura * this.altura;
+},
+
+calcularPerimetro: function() {
+  return 2 * (this.largura + this.altura);
+},
+exibirdetalhes: function() {
+    return `Retângulo com ${this.largura}cm de largura e ${this.altura}cm de altura. Área: ${this.calcularArea()}cm², Perímetro: ${this.calcularPerimetro()}cm.`;
+}
+};
+console.log("Área do retângulo: " + retangulo.calcularArea() + "cm²");
+console.log("Perímetro do retângulo: " + retangulo.calcularPerimetro() + "cm");
+console.log(retangulo.exibirdetalhes());
+
+console.log("--------------------// Exercício 2 //--------------------//");
+
+// Adicione as seguintes propriedades:
 
 // Adicione as propriedades largura (number) com o valor 10 e altura (number) com o valor 5.
 
@@ -74,6 +123,23 @@
 
 // Exiba o objeto desenvolvedor completo no final.
 
+desenvolvedor = {
+  nome: "Mariana",
+  idade: 28,
+  linguagens: ["JavaScript", "Python", "SQL"],
+  frameworks: ["React", "Node.js", "Django"],
+  empresa: {
+    nomeEmpresa: "Tech Solutions",
+    setor: "Desenvolvimento Web"
+  }  
+};
+console.log(desenvolvedor.linguagens[1]);
+console.log(desenvolvedor.empresa.nomeEmpresa);
+desenvolvedor.frameworks.push("React Native");
+desenvolvedor.empresa.setor = "Desenvolvimento Mobile";
+console.log(desenvolvedor);
+
+
 // Exercício 4: Manipulando Listas de Objetos
 // Objetivo: Praticar a iteração e manipulação de um array de objetos, usando métodos como .map() e .filter().
 
@@ -87,3 +153,19 @@
 // Mapear: Crie um novo array chamado nomesDosProdutos que contém apenas os nomes de todos os produtos.
 
 // Filtrar e Mapear: Crie um novo array que contenha apenas os nomes dos produtos com preço abaixo de R$ 50.
+console.log("-------------------------------exercicio 4-----------------------------");
+console.log("");
+
+produtos = [
+  {id: 1, nome: "Smartphone", preco: 1500, categoria: "Tecnologia"},
+  {id: 2, nome: "Caderno", preco: 20, categoria: "Papelaria"},
+  {id: 3, nome: "Fone de Ouvido", preco: 200, categoria: "Tecnologia"}
+];
+
+const produtosDeTecnologia = produtos.filter(produto => produto.categoria === "Tecnologia");
+const nomesDosProdutos = produtos.map(produto => produto.nome);
+const nomesProdutosAbaixo50 = produtos.filter(produto => produto.preco < 50).map(produto => produto.nome);
+
+console.log(produtosDeTecnologia);
+console.log(nomesDosProdutos);
+console.log(`produtos abaixo de R$50,00 : ${nomesProdutosAbaixo50}`);
