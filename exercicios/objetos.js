@@ -2,6 +2,7 @@
 // Objetivo: Praticar a criação de um objeto literal e a manipulação de suas propriedades.
 
 // Cenário: Vamos criar um objeto para representar um Livro.
+const prompt = require("prompt-sync")(); // importa o prompt-sync
 
 const livro = {
   titulo: "A Arte da Guerra",
@@ -9,6 +10,7 @@ const livro = {
   anoPublicacao: -500,
   genero: "Estratégia Militar",
   disponivel: true,
+
 
   //--------------------// Modificando a disponibilidade do livro //--------------------//
   alugar: function() {
@@ -77,19 +79,17 @@ retangulo = {
   largura: 10,
   altura: 5,
 
-  calcularArea: function() {
-    return this.largura * this.altura;
-  },
+calcularArea: function() {
+  return this.largura * this.altura;
+},
 
-  calcularPerimetro: function() {
-    return 2 * (this.largura + this.altura);
-  },
-
-  exibirdetalhes: function() {
-      return `Retângulo com ${this.largura}cm de largura e ${this.altura}cm de altura. Área: ${this.calcularArea()}cm², Perímetro: ${this.calcularPerimetro()}cm.`;
-  }
+calcularPerimetro: function() {
+  return 2 * (this.largura + this.altura);
+},
+exibirdetalhes: function() {
+    return `Retângulo com ${this.largura}cm de largura e ${this.altura}cm de altura. Área: ${this.calcularArea()}cm², Perímetro: ${this.calcularPerimetro()}cm.`;
+}
 };
-
 console.log("Área do retângulo: " + retangulo.calcularArea() + "cm²");
 console.log("Perímetro do retângulo: " + retangulo.calcularPerimetro() + "cm");
 console.log(retangulo.exibirdetalhes());
