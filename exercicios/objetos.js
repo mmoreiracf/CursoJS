@@ -2,6 +2,7 @@
 // Objetivo: Praticar a criação de um objeto literal e a manipulação de suas propriedades.
 
 // Cenário: Vamos criar um objeto para representar um Livro.
+const prompt = require("prompt-sync")(); // importa o prompt-sync
 
 const livro = {
   titulo: "A Arte da Guerra",
@@ -12,7 +13,7 @@ const livro = {
 
 //--------------------// Modificando a disponibilidade do livro //--------------------//
 alugar: function() {
-  let alugar = parseFloat.prompt("Digite se deseja alugar (s) para sim e (n) para não:");
+  let alugar = prompt("Digite se deseja alugar (s) para sim e (n) para não:");
     if (alugar === "s") {
         this.disponivel = false;
         console.log("O livro foi alugado.");
@@ -26,7 +27,7 @@ console.log(livro.titulo);
 console.log(livro.autor);
 console.log(livro);
 
-
+/*
 
 
 // O que você precisa fazer:
