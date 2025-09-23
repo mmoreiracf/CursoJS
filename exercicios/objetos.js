@@ -11,6 +11,7 @@ const livro = {
   genero: "Estratégia Militar",
   disponivel: true,
 
+<<<<<<< HEAD
 //--------------------// Modificando a disponibilidade do livro //--------------------//
 alugar: function() {
   let alugar = prompt("Digite se deseja alugar (s) para sim e (n) para não:");
@@ -21,13 +22,44 @@ alugar: function() {
     else {
         console.log("O livro não foi alugado.");
     }  
+=======
+  //--------------------// Modificando a disponibilidade do livro //--------------------//
+  alugar: function() {
+    let alugar = prompt("Digite se deseja alugar (s) para sim e (n) para não:");
+      if (alugar === "s") {
+          this.disponivel = false;
+          console.log("O livro foi alugado.");
+      }
+      else {
+          console.log("O livro não foi alugado.");
+      }  
+  },
+
+  mudarGenero: function() {
+    let genero = prompt("Forneça o genero:");
+      if (genero === "") {
+          this.genero= genero;
+          console.log("O genero foi alterado");
+      }
+      else {
+          console.log("O genero não foi alterado");
+      }  
+>>>>>>> c4cc0279c85e6d5eb04b6bea29844da7b480db84
     }
 }; 
+
+
 console.log(livro.titulo);
 console.log(livro.autor);
 console.log(livro);
 
+<<<<<<< HEAD
 /*
+=======
+livro.alugar()
+livro.mudarGenero()
+
+>>>>>>> c4cc0279c85e6d5eb04b6bea29844da7b480db84
 
 
 // O que você precisa fazer:
@@ -51,7 +83,7 @@ console.log(livro);
 
 // Exiba o objeto livro completo no console para ver o resultado final.
 
-// xercício 2: Adicionando Comportamento (Métodos)
+// Exercício 2: Adicionando Comportamento (Métodos)
 // Objetivo: Adicionar funções (métodos) a um objeto para que ele possa executar ações.
 
 // Cenário: Vamos criar um objeto Retangulo.
@@ -63,17 +95,19 @@ retangulo = {
   largura: 10,
   altura: 5,
 
-calcularArea: function() {
-  return this.largura * this.altura;
-},
+  calcularArea: function() {
+    return this.largura * this.altura;
+  },
 
-calcularPerimetro: function() {
-  return 2 * (this.largura + this.altura);
-},
-exibirdetalhes: function() {
-    return `Retângulo com ${this.largura}cm de largura e ${this.altura}cm de altura. Área: ${this.calcularArea()}cm², Perímetro: ${this.calcularPerimetro()}cm.`;
-}
+  calcularPerimetro: function() {
+    return 2 * (this.largura + this.altura);
+  },
+
+  exibirdetalhes: function() {
+      return `Retângulo com ${this.largura}cm de largura e ${this.altura}cm de altura. Área: ${this.calcularArea()}cm², Perímetro: ${this.calcularPerimetro()}cm.`;
+  }
 };
+
 console.log("Área do retângulo: " + retangulo.calcularArea() + "cm²");
 console.log("Perímetro do retângulo: " + retangulo.calcularPerimetro() + "cm");
 console.log(retangulo.exibirdetalhes());
@@ -170,3 +204,71 @@ const nomesProdutosAbaixo50 = produtos.filter(produto => produto.preco < 50).map
 console.log(produtosDeTecnologia);
 console.log(nomesDosProdutos);
 console.log(`produtos abaixo de R$50,00 : ${nomesProdutosAbaixo50}`);
+
+
+
+
+// Exercício 1: Calcular o quadrado dos números
+
+// Dada uma lista de números, crie uma nova lista com o quadrado de cada número.
+
+
+
+// numeros = [1, 2, 3, 4, 5]
+
+// Exercício 2: Filtrar palavras que começam com "A"
+
+// Dada uma lista de palavras, crie uma nova lista contendo apenas as palavras que começam com a letra "A" (maiúscula ou minúscula).
+
+
+// frutas = ["Maçã", "Banana", "Abacaxi", "Laranja", "Amora"]
+
+
+// Exercício 3: Criar frases a partir de objetos
+
+// Você tem uma lista de objetos representando produtos. Use `map` para criar uma nova lista de strings no formato: "O produto [nome] custa R$ [preco]".
+
+// produtos = [
+//     {'nome': 'Notebook', 'preco': 2500},
+//     {'nome': 'Mouse', 'preco': 80},
+//     {'nome': 'Teclado', 'preco': 150}
+// ]
+
+// Exercício 4: Filtrar produtos em estoque
+
+// A partir de uma lista de produtos, use `filter` para criar uma nova lista contendo apenas os produtos que têm quantidade em estoque maior que zero.
+
+
+// estoque = [
+//     {'produto': 'Caneta', 'quantidade': 15},
+//     {'produto': 'Lápis', 'quantidade': 0},
+//     {'produto': 'Borracha', 'quantidade': 5},
+//     {'produto': 'Régua', 'quantidade': 0}
+// ]
+
+// Desafio (Combinando `map` e `filter`)
+
+// Desafio 1: Preços dos produtos caros
+
+// Você tem uma lista de produtos. Crie uma nova lista contendo **apenas os preços** dos produtos que custam mais de R$ 100.
+
+
+// produtos = [
+//     {'nome': 'Notebook', 'preco': 2500},
+//     {'nome': 'Mouse', 'preco': 80},
+//     {'nome': 'Teclado', 'preco': 150},
+//     {'nome': 'Monitor', 'preco': 950},
+//     {'nome': 'Webcam', 'preco': 95}
+// ]
+
+// Desafio 2: IDs de usuários ativos
+
+// Dada uma lista de usuários, crie uma nova lista contendo **apenas os IDs** dos usuários que estão ativos.
+
+
+// usuarios = [
+//     {'id': 1, 'nome': 'Carlos', 'ativo': True},
+//     {'id': 2, 'nome': 'Juliana', 'ativo': False},
+//     {'id': 3, 'nome': 'Ricardo', 'ativo': True},
+//     {'id': 4, 'nome': 'Leticia', 'ativo': False}
+// ]
