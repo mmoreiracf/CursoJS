@@ -11,18 +11,7 @@ const livro = {
   genero: "Estratégia Militar",
   disponivel: true,
 
-<<<<<<< HEAD
-//--------------------// Modificando a disponibilidade do livro //--------------------//
-alugar: function() {
-  let alugar = prompt("Digite se deseja alugar (s) para sim e (n) para não:");
-    if (alugar === "s") {
-        this.disponivel = false;
-        console.log("O livro foi alugado.");
-    }
-    else {
-        console.log("O livro não foi alugado.");
-    }  
-=======
+
   //--------------------// Modificando a disponibilidade do livro //--------------------//
   alugar: function() {
     let alugar = prompt("Digite se deseja alugar (s) para sim e (n) para não:");
@@ -44,7 +33,6 @@ alugar: function() {
       else {
           console.log("O genero não foi alterado");
       }  
->>>>>>> c4cc0279c85e6d5eb04b6bea29844da7b480db84
     }
 }; 
 
@@ -53,13 +41,9 @@ console.log(livro.titulo);
 console.log(livro.autor);
 console.log(livro);
 
-<<<<<<< HEAD
-/*
-=======
 livro.alugar()
 livro.mudarGenero()
 
->>>>>>> c4cc0279c85e6d5eb04b6bea29844da7b480db84
 
 
 // O que você precisa fazer:
@@ -95,19 +79,17 @@ retangulo = {
   largura: 10,
   altura: 5,
 
-  calcularArea: function() {
-    return this.largura * this.altura;
-  },
+calcularArea: function() {
+  return this.largura * this.altura;
+},
 
-  calcularPerimetro: function() {
-    return 2 * (this.largura + this.altura);
-  },
-
-  exibirdetalhes: function() {
-      return `Retângulo com ${this.largura}cm de largura e ${this.altura}cm de altura. Área: ${this.calcularArea()}cm², Perímetro: ${this.calcularPerimetro()}cm.`;
-  }
+calcularPerimetro: function() {
+  return 2 * (this.largura + this.altura);
+},
+exibirdetalhes: function() {
+    return `Retângulo com ${this.largura}cm de largura e ${this.altura}cm de altura. Área: ${this.calcularArea()}cm², Perímetro: ${this.calcularPerimetro()}cm.`;
+}
 };
-
 console.log("Área do retângulo: " + retangulo.calcularArea() + "cm²");
 console.log("Perímetro do retângulo: " + retangulo.calcularPerimetro() + "cm");
 console.log(retangulo.exibirdetalhes());
