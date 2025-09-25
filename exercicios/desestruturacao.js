@@ -57,7 +57,7 @@ console.log(candidatosAprovados);
 
 // Cenário: Você tem um array com dados de vendas de produtos.
 
-
+console.log("\n--- Exercício 3: Relatório de Vendas ---");
 const vendas = [
   { produto: 'Notebook', valor: 4500, quantidade: 2 },
   { produto: 'Mouse', valor: 150, quantidade: 10 },
@@ -80,37 +80,54 @@ const vendas = [
 
 // JavaScript
 
-// const dadosAPI = [
-//   {
-//     id: 1,
-//     nome: 'Leanne Graham',
-//     email: 'Sincere@april.biz',
-//     endereco: {
-//       rua: 'Kulas Light',
-//       cidade: 'Gwenborough',
-//     },
-//     ativo: true
-//   },
-//   {
-//     id: 2,
-//     nome: 'Ervin Howell',
-//     email: 'Shanna@melissa.tv',
-//     endereco: {
-//       rua: 'Victor Plains',
-//       cidade: 'Wisokyburgh',
-//     },
-//     ativo: false
-//   },
-//   {
-//     id: 3,
-//     nome: 'Clementine Bauch',
-//     email: 'Nathan@yesenia.net',
-//     endereco: {
-//       rua: 'Douglas Extension',
-//       cidade: 'McKenziehaven',
-//     },
-//     ativo: true
-//   }
-// ];
+
+valortotal = vendas
+  .filter(({valor, quantidade}) => (valor * quantidade) > 5000)
+  .map(({produto, valor, quantidade}) => {
+    const total = valor * quantidade
+    return `${produto}: R$ ${total.toFixed(2)}`
+  })
+console.log(valortotal);
+
+console.log("\n--- Desafio Final: Usuários Formatados ---");
+const dadosAPI = [
+  {
+    id: 1,
+    nome: 'Leanne Graham',
+    email: 'Sincere@april.biz',
+    endereco: {
+      rua: 'Kulas Light',
+      cidade: 'Gwenborough',
+    },
+    ativo: true
+  },
+  {
+    id: 2,
+    nome: 'Ervin Howell',
+    email: 'Shanna@melissa.tv',
+    endereco: {
+      rua: 'Victor Plains',
+      cidade: 'Wisokyburgh',
+    },
+    ativo: false
+  },
+  {
+    id: 3,
+    nome: 'Clementine Bauch',
+    email: 'Nathan@yesenia.net',
+    endereco: {
+      rua: 'Douglas Extension',
+      cidade: 'McKenziehaven',
+    },
+    ativo: true
+  }
+];
+
+const usuariosFormatados = dadosAPI
+  .filter(({ativo}) => ativo) // 1. Filtra apenas os usuários ativos
+  .map(({id, nome, email}) => ({id, nome, email})) // 2. Mapeia para a nova estrutura
+console.log("\n--- Desafio Final: Usuários Formatados ---");
+console.log(usuariosFormatados);
+
 // O que você precisa fazer:
 // Crie um novo array de objetos chamado usuariosFormatados. Este array deve conter objetos com uma estrutura mais simples, mas apenas dos usuários que estão ativos.

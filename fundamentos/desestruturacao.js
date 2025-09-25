@@ -84,3 +84,12 @@ const alunos = [
   { nome: "Clara", nota: 7 },
   { nome: "Lucas", nota: 4 }
 ];
+
+const alunosAprovados = alunos.filter(aluno => {
+
+  return aluno.nota >= 7;
+}).map(aluno => {
+  return `${aluno.nome} - Aprovado`;
+});
+console.log(alunosAprovados);
+
